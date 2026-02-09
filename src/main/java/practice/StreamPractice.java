@@ -1,6 +1,4 @@
 package practice;
-
-
 import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -10,8 +8,6 @@ import model.Person;
 
 
 public class StreamPractice {
-
-
     public int findMinEvenNumber(List<String> numbers) {
         return numbers.stream()
                 .flatMap(s -> List.of(s.split(",")).stream())
@@ -27,8 +23,7 @@ public class StreamPractice {
     public Double getOddNumsAverage(List<Integer> numbers) {
         return IntStream.range(0, numbers.size())
                 .filter(i -> i % 2 == 1)
-                .map(numbers::get)
-                .filter(n -> n % 2 == 0)
+                .map(i -> numbers.get(i) / 2)
                 .average()
                 .orElseThrow(NoSuchElementException::new);
     }
@@ -64,8 +59,6 @@ public class StreamPractice {
 
     public List<String> validateCandidates(List<Candidate> candidates) {
         CandidateValidator validator = new CandidateValidator();
-
-
         return candidates.stream()
                 .filter(validator)
                 .map(Candidate::getName)
@@ -73,5 +66,4 @@ public class StreamPractice {
                 .toList();
     }
 }
-
 
