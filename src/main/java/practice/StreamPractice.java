@@ -1,3 +1,6 @@
+package practice;
+
+
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.IntStream;
@@ -27,3 +30,5 @@ public class StreamPractice {
                 .orElseThrow(NoSuchElementException::new);
     }
 }
+
+
