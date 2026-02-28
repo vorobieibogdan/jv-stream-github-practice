@@ -24,7 +24,6 @@ public class StreamPractice {
         return IntStream.range(0, numbers.size())
                 .filter(i -> i % 2 == 1)
                 .map(i -> numbers.get(i) - 1)
-                .filter(n -> n % 2 != 0)
                 .average()
                 .orElseThrow(NoSuchElementException::new);
     }
@@ -70,4 +69,6 @@ public class StreamPractice {
                 .toList();
     }
 }
+
+
 
