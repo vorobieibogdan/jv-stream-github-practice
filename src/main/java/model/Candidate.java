@@ -12,13 +12,11 @@ public class Candidate {
     public Candidate(int age,
                      String nationality,
                      boolean allowedToVote,
-                     String periodsInUkr,
-                     String name) {
+                     String periodsInUkr) {
         this.age = age;
         this.nationality = nationality;
         this.allowedToVote = allowedToVote;
         this.periodsInUkr = periodsInUkr;
-        this.name = name;
     }
 
     public int getAge() {
@@ -39,6 +37,10 @@ public class Candidate {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
